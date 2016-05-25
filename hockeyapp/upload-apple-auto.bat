@@ -1,0 +1,1 @@
+powershell -executionpolicy bypass -file %~dp0\upload-apple-auto.ps1
