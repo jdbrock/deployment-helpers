@@ -335,13 +335,13 @@ function Push-AppleToHockeyApp {
 
 function Push-AppleToHockeyAppAuto {
 
-	if (!(Test-Path Env:\AppVeyorAPIKey) -Or !(Test-Path Env:\AppVeyorAppId)) {
-		throw "You must specify the AppVeyorAPIKey and AppVeyorAppId environment variables."
+	if (!(Test-Path Env:\HockeyAppAPIKey) -Or !(Test-Path Env:\HockeyAppAppId)) {
+		throw "You must specify the HockeyAppAPIKey and HockeyAppAppId environment variables."
 	}
 
 	$params = @{
-		apiKey = $env:AppVeyorAPIKey
-		appId = $env:AppVeyorAppId
+		apiKey = $env:HockeyAppAPIKey
+		appId = $env:HockeyAppAppId
 		notify = 1
 		status = 2
 		overwrite = $true
